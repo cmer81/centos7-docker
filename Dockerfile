@@ -12,5 +12,6 @@ RUN yum -y install openssh-server \
 	net-tools
 
 ADD run.sh /run.sh
+RUN chmod 755 /run.sh
 
 CMD ["/run.sh"]
