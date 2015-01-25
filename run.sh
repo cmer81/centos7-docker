@@ -4,7 +4,7 @@
 if [[ ! -f /var/log/cloud-init.log ]]; then
 echo "=> An empty or uninitialized cloud-init"
 echo "=> executing CloudInit ..."
-cloud-init init > /dev/null 2>&1
+cloud-init init
 echo "=> Done!"
 else
 cloud-init init

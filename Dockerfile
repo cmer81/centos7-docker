@@ -14,4 +14,7 @@ RUN yum -y install openssh-server \
 ADD run.sh /run.sh
 RUN chmod 755 /run.sh
 
+RUN ssh-keygen -q -N "" -t dsa -f /etc/ssh/ssh_host_dsa_key && ssh-keygen -q -N "" -t rsa -f /etc/ssh/ssh_host_rsa_key && sed -i "s/#UsePrivilegeSeparation.*/UsePrivilegeSeparation no/g" /etc/ssh/sshd_config && sed -i "s/HostKey /etc/ssh/ssh_host_ecdsa_key/#HostKey /etc/ssh/ssh_host_ecdsa_key/g" /etc/ssh/sshd_config
+
+
 CMD ["/run.sh"]
