@@ -19,4 +19,4 @@ RUN wget -O /rpmbuild/SOURCES/cloud-init-0.7.5.tar.gz https://launchpad.net/clou
 RUN rpmbuild -bb cloud-init.spec
 RUN yum -y install openssh-server
 
-CMD ["/run.sh"]
+CMD ["/usr/sbin/sshd", "-D"]
