@@ -1,6 +1,6 @@
 # Not using the official image because it contains a fake package,
 # "fakesystemd" which doesn't provide enough to actually do a build
-FROM tuaris/centos-systemd
+FROM centos
 
 # systemd install fails in docker installs with AUFS backends so ensure
 # they aren't upgraded by yum

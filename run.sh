@@ -11,4 +11,5 @@ cloud-init init
 echo "=> initialized cloud-init Done!"
 fi
 
+echo "=> initialized ssh server Done!"
 exec /usr/sbin/sshd -D
