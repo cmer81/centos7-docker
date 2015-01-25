@@ -6,11 +6,11 @@ FROM tuaris/centos-systemd
 # they aren't upgraded by yum
 RUN yum update -y
 RUN yum -y install openssh-server \
-				    passwd \
-					hostname \
-					cloud-init \
-					net-tools
-					
+	passwd \
+	hostname \
+	cloud-init \
+	net-tools
+
 RUN cloud-init init
-					
+
 CMD ["/usr/sbin/sshd", "-D"]
