@@ -11,4 +11,5 @@ RUN yum -y install openssh-server \
 	cloud-init \
 	net-tools
 
-CMD cloud-init init && /usr/sbin/sshd -D
+CMD cloud-init init 
+CMD /usr/sbin/sshd -D
