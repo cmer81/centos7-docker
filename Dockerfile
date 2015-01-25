@@ -16,6 +16,6 @@ RUN chmod 755 /run.sh
 
 RUN ssh-keygen -q -N "" -t dsa -f /etc/ssh/ssh_host_dsa_key 
 RUN ssh-keygen -q -N "" -t rsa -f /etc/ssh/ssh_host_rsa_key 
-ssh-keygen -q -N "" -t ecdsa -f /etc/ssh/ssh_host_ecdsa_key
+RUN ssh-keygen -q -N "" -t ecdsa -f /etc/ssh/ssh_host_ecdsa_key
 
 CMD ["/run.sh"]
